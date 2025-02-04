@@ -1,7 +1,7 @@
-const Card = () => {
+const Card = ({title}) => {
     return (
         <div>
-            <h2>Card Component</h2>
+            <h2>{title}</h2>
         </div>
     )
 }
