@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
-const Card = ({title}) => {
+const Card = ({ title }) => {
+    const [count, setCount] = useState(0);
     const [hasLiked, setHasLiked] = useState(false);
 
     useEffect(() => {
@@ -8,8 +9,8 @@ const Card = ({title}) => {
     });
 
     return (
-        <div className="card">
-            <h2>{title}</h2>
+        <div className="card" onClick={() => setCount(count + 1)}>
+            <h2>{title} - {count}</h2>
 
             <button onClick={() => setHasLiked(!hasLiked)}>
                 {hasLiked ? '❤️' : '🤍'}
